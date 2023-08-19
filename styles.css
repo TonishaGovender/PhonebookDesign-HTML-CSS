@@ -1,0 +1,99 @@
+/* Reset some default styles */
+body, ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Basic styling for the container */
+.container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1A1A1A;
+  color: #E0E0E0;
+  padding: 40px; /* More padding for emphasis */
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Styling for the tab buttons */
+.tab button {
+  background-color: #FF9800; /* Vibrant orange */
+  border: none;
+  color: white;
+  padding: 15px 30px; /* Larger button padding */
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.tab button:hover {
+  background-color: #FFB74D; /* Lighter orange on hover */
+  transform: translateY(-2px) scale(1.05); /* Slight hover effect */
+}
+
+/* Styling for tab content */
+.tabcontent {
+  display: none;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Styling for headings */
+h2 {
+  font-size: 36px; /* Even larger heading size */
+  margin-bottom: 20px; /* More spacing */
+  color: #FFD700; /* Golden heading color */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for emphasis */
+}
+
+/* Styling for input fields */
+input[type="text"] {
+  width: 100%;
+  padding: 15px; /* Larger padding for inputs */
+  margin-bottom: 20px; /* More spacing */
+  background-color: #262626;
+  border: 1px solid #444;
+  color: white;
+  border-radius: 5px;
+}
+
+/* Styling for the file and folder items */
+ul {
+  padding-left: 30px;
+}
+
+li.folder {
+  font-weight: bold;
+  color: #FF9800;
+}
+
+/* Styling for buttons */
+button {
+  background-color: #FF9800;
+  color: white;
+  border: none;
+  padding: 15px 30px; /* Larger padding for buttons */
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+  background-color: #FFB74D;
+  transform: scale(1.05); /* Slightly bigger hover effect */
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px); /* Slide content from above */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tabcontent {
+  animation: fadeIn 0.8s ease-in-out;
+}

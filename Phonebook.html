@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phone Book</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Tab Buttons -->
+    <div class="tab">
+      <button>Search</button>
+      <button>Add</button>
+    </div>
+    
+    <!-- Phonebook Tab -->
+    <div id="Phonebook" class="tabcontent">
+      <h2>Phonebook</h2>
+      <input type="text" id="phonebookFilter" placeholder="Select Phonebook" />
+      <ul id="phonebookList">
+        <!-- Phonebook entries will be populated here -->
+      </ul>
+      <div id="PhonebookDetails">
+        <h2>Contacts</h2>
+        <input type="text" id="entryFilter" placeholder="Select Contact" />
+        <ul id="entryList">
+          <!-- Contact details will be populated here -->
+        </ul>
+      </div>
+    </div>
+    
+    <!-- Add Entries Tab -->
+    <div id="AddEntries" class="tabcontent">
+      <h2>Add</h2>
+      <input type="text" id="nameInput" placeholder="Phonebook" />
+      <input type="text" id="nameInput" placeholder="Name" />
+      <input type="text" id="numberInput" placeholder="Number" />
+      <button>Save</button>
+    </div>
+  </div>
+</body>
+<script>
+  // Wait for the DOM to load before attaching event listeners
+  document.addEventListener("DOMContentLoaded", function() {
+    // Select tab buttons and tab contents
+    const tabs = document.querySelectorAll(".tab button");
+    const tabContents = document.querySelectorAll(".tabcontent");
+
+    // Attach click event to tab buttons
+    tabs.forEach((tab, index) => {
+      tab.addEventListener("click", () => {
+        // Remove 'active' class from all tab buttons
+        tabs.forEach(t => t.classList.remove("active"));
+        // Hide all tab contents
+        tabContents.forEach(content => content.style.display = "none");
+        // Add 'active' class to clicked tab button
+        tab.classList.add("active");
+        // Display corresponding tab content
+        tabContents[index].style.display = "block";
+      });
+    });
+
+    // Automatically click the first tab to show its content by default
+    tabs[0].click(); 
+  });
+</script>
+</html>
